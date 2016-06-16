@@ -1,0 +1,17 @@
+<div class="container">
+
+
+<li>Store Name: <%= @store.long_name %></li>
+<li>Store Type: <%= @store.store_type %></li>
+<li>Address: <%= @store.address %></li>
+<li>City, State, Zip: <%= "#{@store.city}, #{@store.state} #{@store.zip}" %></li>
+<li>Hours:</li>
+<div class="hours">
+
+<ul>
+<% @hours.each do |day| %>
+  <li><%= day %></li>
+<% end %>
+</div>
+</ul>
+</div>

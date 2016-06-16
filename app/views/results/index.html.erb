@@ -1,0 +1,18 @@
+<h1><%= pluralize(@count, ' Total Store') %></h1>
+<div class="results">
+  <% @results.each_with_index do |result, n| %>
+  <div class="result" id="result-<%= n + 1 %>">
+    <div>
+      <ul>
+        <li>Store Name: <%= link_to result.long_name, store_path(result.store_id) %></li>
+        <ul>
+          <li>Store City: <%= result.city %></li>
+          <li>Store Distance from Zip: <%= result.distance %></li>
+          <li>Store Phone Number: <%= result.phone_number %></li>
+          <li>Store Type: <%= result.store_type %></li>
+        </ul>
+      </ul>
+    </div>
+  </div>
+  <% end %>
+</div>
